@@ -83,8 +83,8 @@ RUN curl -L https://getcomposer.org/installer -o composer-setup.php && \
 
 VOLUME ["/var/www/html"]
 COPY nginx/conf.d/default.conf /nginx.conf
-COPY entrypoint.sh /usr/local/bin/
-RUN dos2unix /usr/local/bin/entrypoint.sh
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+
 WORKDIR /var/www/html
 
 VOLUME ["/nginx/conf.d"]
